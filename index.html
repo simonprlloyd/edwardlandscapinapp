@@ -9,17 +9,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
+  --red: #c8102e;
+  --red-dark: #8b0a1f;
+  --red-deep: #5a0613;
+  --cherry: #e63946;
   --moss: #1a3d2e;
   --leaf: #2d6a4f;
   --grass: #52b788;
   --lime: #d8f3a3;
-  --sun: #ffd60a;
-  --orange: #ff7b29;
+  --bark: #3d2817;
+  --tan: #d4a373;
   --cream: #faf6ed;
-  --bark: #2b1d0e;
-  --snow: #eef4f8;
-  --ice: #a8dadc;
-  --ink: #0d1f17;
+  --snow: #ffffff;
+  --ice: #e8eef0;
+  --ink: #0d0d0d;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -68,14 +71,14 @@ nav {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--moss);
+  color: var(--ink);
   text-decoration: none;
 }
 
 .logo-amp {
   font-style: italic;
   font-weight: 400;
-  color: var(--leaf);
+  color: var(--red);
 }
 
 .logo-mark {
@@ -117,7 +120,7 @@ nav {
 .nav-links a:hover { color: var(--leaf); }
 
 .nav-cta {
-  background: var(--ink);
+  background: var(--red);
   color: var(--cream);
   padding: 0.7rem 1.4rem;
   border-radius: 100px;
@@ -129,8 +132,9 @@ nav {
 }
 
 .nav-cta:hover {
-  background: var(--leaf);
+  background: var(--red-dark);
   transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(200, 16, 46, 0.4);
 }
 
 /* Hamburger - hidden on desktop */
@@ -138,7 +142,7 @@ nav {
   display: none;
   width: 44px;
   height: 44px;
-  background: var(--ink);
+  background: var(--red);
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -150,7 +154,7 @@ nav {
   transition: background 0.2s;
 }
 
-.hamburger:hover { background: var(--leaf); }
+.hamburger:hover { background: var(--red-dark); }
 
 .hamburger span {
   display: block;
@@ -214,7 +218,7 @@ nav {
 }
 
 .mobile-close:hover {
-  background: var(--leaf);
+  background: var(--red);
   transform: rotate(90deg);
 }
 
@@ -231,7 +235,7 @@ nav {
 }
 
 .mobile-link:hover, .mobile-link:active {
-  color: var(--leaf);
+  color: var(--red);
   padding-left: 0.5rem;
 }
 
@@ -245,8 +249,8 @@ nav {
 .mobile-calls a {
   display: block;
   padding: 0.85rem 1rem;
-  background: var(--lime);
-  color: var(--ink);
+  background: var(--red);
+  color: var(--cream);
   border-radius: 100px;
   text-decoration: none;
   font-family: 'Fraunces', serif;
@@ -258,12 +262,12 @@ nav {
 }
 
 .mobile-calls a:active {
-  background: var(--sun);
+  background: var(--red-dark);
 }
 
 .mobile-cta {
   margin-top: 1rem;
-  background: var(--ink);
+  background: var(--red);
   color: var(--cream);
   padding: 1rem 1.5rem;
   border-radius: 100px;
@@ -271,6 +275,7 @@ nav {
   font-weight: 600;
   text-align: center;
   font-size: 1rem;
+  border: 2px solid var(--ink);
 }
 
 /* Backdrop for mobile menu */
@@ -314,8 +319,8 @@ nav {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--moss);
-  color: var(--lime);
+  background: var(--red);
+  color: var(--cream);
   padding: 0.4rem 1rem;
   border-radius: 100px;
   font-size: 0.8rem;
@@ -328,7 +333,7 @@ nav {
 .eyebrow::before {
   content: '';
   width: 8px; height: 8px;
-  background: var(--grass);
+  background: var(--lime);
   border-radius: 50%;
   animation: pulse 2s ease-in-out infinite;
 }
@@ -350,7 +355,7 @@ h1.headline {
 
 h1.headline .stroke {
   font-style: italic;
-  color: var(--leaf);
+  color: var(--red);
   font-weight: 400;
   position: relative;
   display: inline-block;
@@ -362,7 +367,7 @@ h1.headline .stroke::after {
   left: -5%; right: -5%;
   bottom: 5%;
   height: 18%;
-  background: var(--sun);
+  background: var(--lime);
   z-index: -1;
   transform: skew(-3deg);
 }
@@ -381,7 +386,7 @@ h1.headline .stroke::after {
 }
 
 .btn-primary {
-  background: var(--ink);
+  background: var(--red);
   color: var(--cream);
   padding: 1rem 2rem;
   border-radius: 100px;
@@ -391,14 +396,14 @@ h1.headline .stroke::after {
   align-items: center;
   gap: 0.5rem;
   transition: all 0.3s;
-  border: 2px solid var(--ink);
+  border: 2px solid var(--red);
 }
 
 .btn-primary:hover {
-  background: var(--leaf);
-  border-color: var(--leaf);
+  background: var(--red-dark);
+  border-color: var(--red-dark);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(45, 106, 79, 0.3);
+  box-shadow: 0 10px 30px rgba(200, 16, 46, 0.4);
 }
 
 .btn-secondary {
@@ -431,7 +436,7 @@ h1.headline .stroke::after {
 
 .blob-1 {
   width: 480px; height: 480px;
-  background: radial-gradient(circle, var(--grass), var(--leaf));
+  background: radial-gradient(circle, var(--cherry), var(--red-dark));
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   animation: morph 8s ease-in-out infinite;
@@ -450,9 +455,9 @@ h1.headline .stroke::after {
   border-radius: 0 100% 0 100%;
 }
 
-.leaf-1 { top: 8%; right: 18%; transform: rotate(25deg); animation: float 5s ease-in-out infinite; }
-.leaf-2 { bottom: 15%; left: 8%; transform: rotate(-40deg); background: var(--sun); animation: float 5s ease-in-out infinite 1s; }
-.leaf-3 { top: 30%; left: 5%; transform: rotate(60deg); width: 60px; height: 90px; background: var(--orange); animation: float 5s ease-in-out infinite 2s; }
+.leaf-1 { top: 8%; right: 18%; transform: rotate(25deg); animation: float 5s ease-in-out infinite; background: var(--grass); }
+.leaf-2 { bottom: 15%; left: 8%; transform: rotate(-40deg); background: var(--lime); animation: float 5s ease-in-out infinite 1s; }
+.leaf-3 { top: 30%; left: 5%; transform: rotate(60deg); width: 60px; height: 90px; background: var(--cherry); animation: float 5s ease-in-out infinite 2s; }
 .leaf-4 { bottom: 8%; right: 10%; transform: rotate(-15deg); width: 70px; height: 100px; background: var(--ice); animation: float 5s ease-in-out infinite 0.5s; }
 
 @keyframes float {
@@ -485,7 +490,7 @@ h1.headline .stroke::after {
   box-shadow:
     0 0 0 2px #2a2a2a,
     0 25px 60px rgba(0,0,0,0.35),
-    0 50px 100px rgba(45, 106, 79, 0.25),
+    0 50px 100px rgba(200, 16, 46, 0.3),
     inset 0 0 0 1px rgba(255,255,255,0.1);
 }
 
@@ -543,7 +548,7 @@ h1.headline .stroke::after {
 .hero-badge {
   position: absolute;
   width: 130px; height: 130px;
-  background: var(--sun);
+  background: var(--red);
   border-radius: 50%;
   bottom: 8%; right: 8%;
   display: flex;
@@ -555,10 +560,11 @@ h1.headline .stroke::after {
   text-align: center;
   font-size: 0.9rem;
   line-height: 1.2;
-  color: var(--ink);
+  color: var(--cream);
   animation: spin 20s linear infinite;
-  box-shadow: 0 20px 50px rgba(255, 214, 10, 0.4);
+  box-shadow: 0 20px 50px rgba(200, 16, 46, 0.4);
   z-index: 3;
+  border: 3px solid var(--ink);
 }
 
 @keyframes spin {
@@ -573,8 +579,8 @@ h1.headline .stroke::after {
 
 /* Marquee */
 .marquee {
-  background: var(--moss);
-  color: var(--lime);
+  background: var(--red);
+  color: var(--cream);
   padding: 1.5rem 0;
   overflow: hidden;
   border-top: 3px solid var(--ink);
@@ -599,7 +605,7 @@ h1.headline .stroke::after {
 
 .marquee-track span::after {
   content: '✦';
-  color: var(--sun);
+  color: var(--lime);
   font-style: normal;
   font-size: 1.5rem;
 }
@@ -636,7 +642,7 @@ h1.headline .stroke::after {
 }
 
 .section-head h2 em {
-  color: var(--leaf);
+  color: var(--red);
   font-style: italic;
   font-weight: 400;
 }
@@ -669,25 +675,45 @@ h1.headline .stroke::after {
 
 .service-card:hover {
   transform: translateY(-8px) rotate(-1deg);
-  box-shadow: 12px 12px 0 var(--ink);
+  box-shadow: 12px 12px 0 var(--leaf);
 }
 
-.service-card.green { background: var(--leaf); color: var(--cream); }
-.service-card.green h3, .service-card.green .service-num { color: var(--lime); }
-.service-card.green p { color: rgba(255,255,255,0.85); }
+.service-card.red { background: var(--red); color: var(--cream); border-color: var(--ink); }
+.service-card.red h3, .service-card.red .service-num { color: var(--cream); }
+.service-card.red p { color: rgba(255,255,255,0.92); }
 
-.service-card.yellow { background: var(--sun); }
-.service-card.orange { background: var(--orange); color: var(--cream); }
+.service-card.red-dark { background: var(--red-deep); color: var(--cream); border-color: var(--ink); }
+.service-card.red-dark h3 { color: var(--cream); }
+.service-card.red-dark .service-num { color: var(--cherry); }
+.service-card.red-dark p { color: rgba(255,255,255,0.85); }
+
+.service-card.cream { background: var(--cream); color: var(--ink); }
+.service-card.cream .service-num { color: var(--red); }
+
+.service-card.black { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.service-card.black h3 { color: var(--cream); }
+.service-card.black .service-num { color: var(--red); }
+.service-card.black p { color: rgba(255,255,255,0.8); }
+
+.service-card.snow { background: var(--snow); border-color: var(--ink); }
+.service-card.snow .service-num { color: var(--red); }
+
+/* Legacy aliases kept for safety */
+.service-card.green { background: var(--leaf); color: var(--cream); border-color: var(--ink); }
+.service-card.green h3, .service-card.green .service-num { color: var(--lime); }
+.service-card.green p { color: rgba(255,255,255,0.9); }
+.service-card.yellow { background: var(--red); color: var(--cream); }
+.service-card.yellow h3, .service-card.yellow .service-num { color: var(--cream); }
+.service-card.yellow p { color: rgba(255,255,255,0.9); }
+.service-card.orange { background: var(--cherry); color: var(--cream); }
 .service-card.orange h3, .service-card.orange .service-num { color: var(--cream); }
 .service-card.orange p { color: rgba(255,255,255,0.9); }
-
-.service-card.snow { background: var(--ice); }
 
 .service-num {
   font-family: 'Fraunces', serif;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--leaf);
+  color: var(--red);
   letter-spacing: 0.05em;
 }
 
@@ -712,7 +738,7 @@ h1.headline .stroke::after {
 
 /* ABOUT */
 .about {
-  background: var(--moss);
+  background: var(--red-deep);
   color: var(--cream);
   padding: 8rem 2rem;
   position: relative;
@@ -724,10 +750,21 @@ h1.headline .stroke::after {
   position: absolute;
   top: -100px; right: -100px;
   width: 400px; height: 400px;
-  background: var(--leaf);
+  background: var(--cherry);
   border-radius: 50%;
   opacity: 0.5;
   filter: blur(80px);
+}
+
+.about::after {
+  content: '';
+  position: absolute;
+  bottom: -150px; left: -150px;
+  width: 500px; height: 500px;
+  background: var(--red);
+  border-radius: 50%;
+  opacity: 0.3;
+  filter: blur(100px);
 }
 
 .about-inner {
@@ -751,7 +788,7 @@ h1.headline .stroke::after {
 }
 
 .about h2 em {
-  color: var(--sun);
+  color: var(--lime);
   font-style: italic;
 }
 
@@ -777,6 +814,7 @@ h1.headline .stroke::after {
   align-items: center;
   gap: 1.25rem;
   transition: transform 0.3s;
+  border: 2px solid var(--ink);
 }
 
 .why-item:hover {
@@ -784,12 +822,14 @@ h1.headline .stroke::after {
 }
 
 .why-item:nth-child(2) { background: var(--lime); margin-left: 1.5rem; }
-.why-item:nth-child(3) { margin-left: 3rem; }
-.why-item:nth-child(4) { background: var(--sun); margin-left: 1.5rem; }
+.why-item:nth-child(3) { background: var(--leaf); color: var(--cream); margin-left: 3rem; }
+.why-item:nth-child(3) .why-text p { color: rgba(255,255,255,0.85); }
+.why-item:nth-child(4) { background: var(--ink); color: var(--cream); margin-left: 1.5rem; }
+.why-item:nth-child(4) .why-text p { color: rgba(255,255,255,0.85); }
 
 .why-icon {
   width: 56px; height: 56px;
-  background: var(--leaf);
+  background: var(--red);
   color: var(--cream);
   border-radius: 50%;
   display: flex;
@@ -800,8 +840,9 @@ h1.headline .stroke::after {
   flex-shrink: 0;
 }
 
-.why-item:nth-child(2) .why-icon,
-.why-item:nth-child(4) .why-icon { background: var(--moss); }
+.why-item:nth-child(2) .why-icon { background: var(--ink); }
+.why-item:nth-child(3) .why-icon { background: var(--lime); color: var(--leaf); }
+.why-item:nth-child(4) .why-icon { background: var(--red); }
 
 .why-text h4 {
   font-family: 'Fraunces', serif;
@@ -831,7 +872,7 @@ h1.headline .stroke::after {
 }
 
 .stat {
-  border-top: 2px solid var(--ink);
+  border-top: 3px solid var(--red);
   padding-top: 1.5rem;
 }
 
@@ -839,7 +880,7 @@ h1.headline .stroke::after {
   font-family: 'Fraunces', serif;
   font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 600;
-  color: var(--leaf);
+  color: var(--red);
   line-height: 1;
   letter-spacing: -0.04em;
 }
@@ -912,7 +953,7 @@ h1.headline .stroke::after {
 
 .gallery-item:hover {
   transform: translateY(-6px);
-  box-shadow: 8px 8px 0 var(--ink);
+  box-shadow: 8px 8px 0 var(--leaf);
 }
 
 .gallery-item img {
@@ -1000,9 +1041,14 @@ h1.headline .stroke::after {
 
 .season:hover {
   background: rgba(255,255,255,0.05);
-  border-color: var(--grass);
+  border-color: var(--red);
   transform: translateY(-4px);
 }
+
+.season:nth-child(1):hover { border-color: var(--grass); }
+.season:nth-child(2):hover { border-color: var(--red); }
+.season:nth-child(3):hover { border-color: var(--tan); }
+.season:nth-child(4):hover { border-color: var(--cream); }
 
 .season-emoji {
   font-size: 2.5rem;
@@ -1013,8 +1059,13 @@ h1.headline .stroke::after {
   font-family: 'Fraunces', serif;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: var(--lime);
+  color: var(--red);
 }
+
+.season:nth-child(1) h4 { color: var(--lime); }
+.season:nth-child(2) h4 { color: var(--red); }
+.season:nth-child(3) h4 { color: var(--tan); }
+.season:nth-child(4) h4 { color: var(--cream); }
 
 .season p {
   font-size: 0.9rem;
@@ -1024,7 +1075,8 @@ h1.headline .stroke::after {
 /* CTA */
 .cta-section {
   padding: 6rem 2rem;
-  background: var(--lime);
+  background: var(--red);
+  color: var(--cream);
   position: relative;
   overflow: hidden;
 }
@@ -1033,9 +1085,9 @@ h1.headline .stroke::after {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 20% 30%, var(--grass) 0%, transparent 30%),
-                    radial-gradient(circle at 80% 70%, var(--sun) 0%, transparent 30%);
-  opacity: 0.4;
+  background-image: radial-gradient(circle at 20% 30%, var(--red-dark) 0%, transparent 40%),
+                    radial-gradient(circle at 80% 70%, var(--cherry) 0%, transparent 40%);
+  opacity: 0.6;
 }
 
 .cta-inner {
@@ -1053,11 +1105,12 @@ h1.headline .stroke::after {
   letter-spacing: -0.03em;
   line-height: 1;
   margin-bottom: 1.5rem;
+  color: var(--cream);
 }
 
 .cta-inner h2 em {
   font-style: italic;
-  color: var(--moss);
+  color: var(--lime);
 }
 
 .cta-inner p {
@@ -1066,6 +1119,7 @@ h1.headline .stroke::after {
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+  color: rgba(255,255,255,0.92);
 }
 
 .cta-form {
@@ -1102,7 +1156,8 @@ h1.headline .stroke::after {
 }
 
 .cta-form button:hover {
-  background: var(--leaf);
+  background: var(--cream);
+  color: var(--red);
   transform: scale(1.05);
 }
 
@@ -1117,25 +1172,25 @@ h1.headline .stroke::after {
 }
 
 .cta-call span {
-  color: var(--moss);
+  color: rgba(255,255,255,0.85);
   font-weight: 500;
 }
 
 .cta-call a {
-  color: var(--ink);
+  color: var(--cream);
   text-decoration: none;
   font-family: 'Fraunces', serif;
   font-weight: 600;
   font-size: 1.15rem;
   letter-spacing: -0.01em;
-  border-bottom: 2px solid var(--moss);
+  border-bottom: 2px solid var(--lime);
   padding-bottom: 2px;
   transition: all 0.2s;
 }
 
 .cta-call a:hover {
-  color: var(--moss);
-  border-bottom-color: var(--ink);
+  color: var(--lime);
+  border-bottom-color: var(--cream);
 }
 
 /* FOOTER */
@@ -1260,7 +1315,7 @@ footer {
   max-width: 480px;
   width: 100%;
   position: relative;
-  box-shadow: 16px 16px 0 var(--moss);
+  box-shadow: 16px 16px 0 var(--red);
   transform: scale(0.9) translateY(20px);
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   max-height: 92vh;
@@ -1291,14 +1346,14 @@ footer {
 }
 
 .popup-close:hover {
-  background: var(--leaf);
+  background: var(--red);
   transform: rotate(90deg);
 }
 
 .popup-badge {
   display: inline-block;
-  background: var(--sun);
-  color: var(--ink);
+  background: var(--red);
+  color: var(--cream);
   padding: 0.4rem 1rem;
   border-radius: 100px;
   font-size: 0.75rem;
@@ -1320,7 +1375,7 @@ footer {
 
 .popup-title em {
   font-style: italic;
-  color: var(--leaf);
+  color: var(--red);
   position: relative;
   display: inline-block;
 }
@@ -1362,14 +1417,14 @@ footer {
 }
 
 .popup-form input:focus {
-  border-color: var(--leaf);
-  box-shadow: 0 0 0 4px rgba(82, 183, 136, 0.2);
+  border-color: var(--red);
+  box-shadow: 0 0 0 4px rgba(200, 16, 46, 0.2);
 }
 
 .popup-form input::placeholder { color: #8a9890; }
 
 .popup-form button {
-  background: var(--ink);
+  background: var(--red);
   color: var(--cream);
   padding: 1rem 1.5rem;
   border: 2px solid var(--ink);
@@ -1383,10 +1438,10 @@ footer {
 }
 
 .popup-form button:hover {
-  background: var(--leaf);
-  border-color: var(--leaf);
+  background: var(--red-dark);
+  border-color: var(--ink);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(45, 106, 79, 0.3);
+  box-shadow: 0 8px 20px rgba(200, 16, 46, 0.4);
 }
 
 .popup-fine {
@@ -1407,7 +1462,7 @@ footer {
 .popup-success-icon {
   width: 72px;
   height: 72px;
-  background: var(--leaf);
+  background: var(--red);
   color: var(--cream);
   border-radius: 50%;
   display: flex;
@@ -1458,14 +1513,16 @@ footer {
 }
 
 .popup-success-calls a:hover {
-  background: var(--sun);
+  background: var(--red);
+  color: var(--cream);
+  border-color: var(--red);
   transform: translateY(-2px);
 }
 
 @media (max-width: 540px) {
   .popup {
     padding: 2.5rem 1.75rem 1.5rem;
-    box-shadow: 8px 8px 0 var(--moss);
+    box-shadow: 8px 8px 0 var(--red);
   }
   .popup-title { font-size: 2rem; }
 }
@@ -1556,14 +1613,14 @@ footer {
       </div>
       <p>Weekly mowing, edging, trimming, and blowing. Crisp lines, clean finish, every visit.</p>
     </div>
-    <div class="service-card yellow reveal">
+    <div class="service-card cream reveal">
       <div>
         <div class="service-num">02 / Beds</div>
         <h3>Mulch & Planting</h3>
       </div>
       <p>Fresh mulch, seasonal flowers, shrub care. We make the beds that make your yard.</p>
     </div>
-    <div class="service-card orange reveal">
+    <div class="service-card red-dark reveal">
       <div>
         <div class="service-num">03 / Cleanups</div>
         <h3>Spring & Fall</h3>
@@ -1577,14 +1634,14 @@ footer {
       </div>
       <p>Plowing, shoveling, salting. 24/7 storm response so you wake up to clear pavement.</p>
     </div>
-    <div class="service-card reveal">
+    <div class="service-card red reveal">
       <div>
         <div class="service-num">05 / Hardscaping</div>
         <h3>Patios & Walkways</h3>
       </div>
       <p>Paver patios, fire pits, retaining walls, walkways. Built to last decades, designed to wow.</p>
     </div>
-    <div class="service-card green reveal">
+    <div class="service-card black reveal">
       <div>
         <div class="service-num">06 / Trees</div>
         <h3>Tree & Stump Removal</h3>
@@ -1660,7 +1717,7 @@ footer {
 
 <section class="gallery" id="gallery">
   <div class="gallery-head reveal">
-    <div class="eyebrow" style="background: var(--leaf); color: var(--lime); margin-bottom: 1rem;">Recent Work</div>
+    <div class="eyebrow" style="background: var(--red-dark); color: var(--cream); margin-bottom: 1rem;">Recent Work</div>
     <h2>Proof is in the <em>property.</em></h2>
     <p>Real yards. Real houses. Real Lake County. Every photo is a job we've done — no stock images, no filters, just the work.</p>
   </div>
